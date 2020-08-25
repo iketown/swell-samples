@@ -1,0 +1,23 @@
+{
+  "name": "web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@sanity/block-content-to-react": "2.0.7",
+    "@sanity/client": "1.150.1",
+    "@sanity/image-url": "0.140.19",
+    "groq": "1.150.1",
+    "next": "9.5.2",
+    "react": "16.13.1",
+    "react-dom": "16.13.1"
+  },
+  "devDependencies": {
+    "@types/react": "16.9.47",
+    "typescript": "4.0.2"
+  }
+}
