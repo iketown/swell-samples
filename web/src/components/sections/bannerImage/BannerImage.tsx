@@ -9,7 +9,7 @@ const StyledBannerImage = styled.div<{
   height: number;
 }>`
   background-image: url(${(p) => p.imageUrl});
-  background-size: contain;
+  background-size: cover;
   background-position: center;
 
   background-repeat: no-repeat;

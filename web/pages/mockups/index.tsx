@@ -18,7 +18,6 @@ const MockupsHome = (props) => {
   return (
     <Container>
       <Header content="Web Sites" as="h1" textAlign="center" />
-      <JView src={props} collapsed />
       <Grid columns={2} stackable>
         <Grid.Column>
           <Segment>

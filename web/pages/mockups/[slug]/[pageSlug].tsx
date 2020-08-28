@@ -1,6 +1,6 @@
 import React from "react";
 import { GetServerSideProps } from "next";
-import pageQuery, { newPageQuery } from "@queries/pageQuery";
+import { newPageQuery } from "@queries/pageQuery";
 import homeQuery from "@queries/homeQuery";
 import JView from "@utils/JView";
 import client from "../../../client";

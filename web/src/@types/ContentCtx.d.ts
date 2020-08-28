@@ -19,6 +19,7 @@ interface ContentCtx {
     // if its a single link to a page
     page?: PageLink;
     title?: string;
+    slug?: string;
     // if its a menu
     subLinks?: { page: PageLink }[];
     buttonText?: string;
@@ -46,6 +47,7 @@ interface Specialty {
 interface PageData {
   bannerImage: {
     image: {
+      _type: "image";
       asset;
       crop;
       hotspot;
