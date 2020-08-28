@@ -4,10 +4,16 @@ export default {
   type: "document",
   fields: [
     {
+      name: "pageTitle",
+      type: "string",
+      title: "Page Name",
+      description: `title as shown on header`,
+    },
+    {
       name: "title",
       type: "string",
       title: "Title",
-      description: "this page title",
+      description: "title for records, not shown",
     },
     {
       name: "bannerImage",
@@ -18,49 +24,23 @@ export default {
       name: "slug",
       title: "Slug",
       type: "slug",
-      description: `this will be the main home page link. like "motorcycle-accidents"`,
-      options: {
-        source: "title",
-        maxLength: 96,
-      },
+      description: `XXX not this - - this will be the main home page link. like "motorcycle-accidents" or "home"`,
     },
     {
-      name: "sections",
+      name: "pageLink",
+      type: "string",
+      title: "Page Link",
+      description: `this will be the displayed slug "home" or "car-accidents" etc.`,
+    },
+    {
+      name: "pageSectionGroups",
       type: "array",
       of: [
-        // these could be different types of secions, but now there is only one.
+        { type: "pageSectionGroup" },
         {
-          type: "pageSectionGeneral",
-          name: "General Section",
-          title: "Custom General Section",
-        },
-        {
-          type: "pageSectionTestimonial",
-          name: "Testimonial Section",
-          title: "Custom Testimonial Section",
-        },
-        {
-          type: "pageSectionSpecial",
-          name: "Special Section",
-          title: "Special Section",
-        },
-        {
-          name: "prefabGeneral",
-          title: "Pre Fab Page Section",
           type: "reference",
-          to: { type: "pageSectionGeneral" },
-        },
-        {
-          name: "prefabTestimonial",
-          title: "Pre Fab Testimonial",
-          type: "reference",
-          to: { type: "pageSectionTestimonial" },
-        },
-        {
-          name: "prefabSpecial",
-          title: "Pre Fab Special",
-          type: "reference",
-          to: { type: "pageSectionSpecial" },
+          title: "Prefab Page section group",
+          to: { type: "pageSectionGroup" },
         },
       ],
     },

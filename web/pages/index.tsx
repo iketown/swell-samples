@@ -1,36 +1,18 @@
 import React from "react";
+import { Header, Icon, Container, Button } from "semantic-ui-react";
 import Link from "next/link";
-import { GetStaticProps } from "next";
-import client from "../client";
-import groq from "groq";
-const HomePage = ({ posts = [] }) => {
+const HomePage = () => {
   return (
-    <div>
-      <h1>hey its my blog</h1>
-      {posts.map(({ _id, title = "", slug = {}, _updatedAt = "" }) => {
-        return (
-          slug && (
-            <li key={_id}>
-              <Link href="/post/[slug]" as={`/post/${slug.current}`}>
-                <a>{title}</a>
-              </Link>
-            </li>
-          )
-        );
-      })}
-    </div>
+    <Container style={{ marginTop: "2rem" }}>
+      <Header as="h2" textAlign="center" icon>
+        <Icon circular name="world" />
+        <Header.Content>Law mockups</Header.Content>
+        <Link href="/mockups" as="/mockups">
+          <Button primary>GO</Button>
+        </Link>
+      </Header>
+    </Container>
   );
 };
 
 export default HomePage;
-
-const query = groq`
-  *[_type == "post" && _createdAt < now() ]|order(_createdAt asc)
-`;
-export const getStaticProps: GetStaticProps = async (ctx) => {
-  const posts = await client.fetch(query);
-  console.log("posts", posts);
-  return {
-    props: { posts },
-  };
-};

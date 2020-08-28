@@ -16,6 +16,7 @@ const StyledButton = styled(Button)<{ selected?: boolean }>`
     font-weight: 400;
     object-fit: cover;
     text-transform: uppercase;
+    white-space: nowrap;
     background: ${(p) =>
       p.selected ? button2.selectedBackground : button2.background};
     color: ${(p) => (p.selected ? button2.selectedText : button2.text)};

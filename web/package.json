@@ -21,6 +21,7 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-json-view": "1.19.1",
+    "react-media": "2.0.0-rc.1",
     "semantic-ui-css": "2.4.1",
     "semantic-ui-react": "1.2.1",
     "styled-components": "5.1.1"

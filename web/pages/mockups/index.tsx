@@ -18,23 +18,24 @@ const MockupsHome = (props) => {
   return (
     <Container>
       <Header content="Web Sites" as="h1" textAlign="center" />
+      <JView src={props} collapsed />
       <Grid columns={2} stackable>
         <Grid.Column>
           <Segment>
             <Header content="BleyEvans" as="h3" color="grey" />
             <List>
               {props.sites?.map(
-                ({ clientName, template, slug, _updatedAt }, index) => {
+                ({ mainTitle, template, slug, _updatedAt }, index) => {
                   return (
                     <Link
-                      href="/mockups/[slug]"
-                      as={`/mockups/${slug.current}`}
+                      href="/mockups/[slug]/home"
+                      as={`/mockups/${slug.current}/home`}
                       key={index}
                     >
                       <List.Item>
                         <List.Icon name="law" verticalAlign="middle" />
                         <List.Content>
-                          <List.Header as="a">{clientName}</List.Header>
+                          <List.Header as="a">{mainTitle}</List.Header>
                           <List.Description as="a">
                             {moment(_updatedAt).fromNow()}
                           </List.Description>

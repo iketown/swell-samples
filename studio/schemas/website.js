@@ -74,6 +74,9 @@ export default {
       title: "Main People Photo",
       description: "photo of lawyer(s)",
       type: "image",
+      options: {
+        hotspot: true,
+      },
     },
     {
       name: "bannerImageBG",

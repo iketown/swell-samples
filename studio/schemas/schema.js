@@ -20,6 +20,7 @@ import {
   pageSectionTestimonial,
   pageSectionSpecial,
 } from "./pageSection";
+import pageSectionGroup from "./pageSectionGroup";
 import mainLink from "./mainLink";
 import mainLinkMenu from "./mainLinkMenu";
 // Then we give our schema to the builder and provide the result to Sanity
@@ -39,6 +40,7 @@ export default createSchema({
     pageSectionGeneral,
     pageSectionTestimonial,
     pageSectionSpecial,
+    pageSectionGroup,
     mainLink,
     mainLinkMenu,
   ]),

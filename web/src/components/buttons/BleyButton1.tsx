@@ -13,6 +13,7 @@ const StyledButton = styled(Button)<{ selected?: boolean }>`
     border-right: 1px solid #ffffff33;
     font-family: "Old Standard TT", serif;
     font-weight: 400;
+    white-space: nowrap;
     text-transform: uppercase;
     background: ${(p) =>
       p.selected ? button1.selectedBackground : button1.background};

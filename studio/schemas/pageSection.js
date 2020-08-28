@@ -21,7 +21,17 @@ export const pageSectionGeneral = {
       title: "Body",
       type: "blockContent",
     },
+    {
+      name: "gridValue",
+      type: "number",
+      title: "Grid Value",
+      description:
+        "how many columns out of 16 total when screen is wide.  1/2 width = 8.  full width = 16.  becomes full width on small screen",
+    },
   ],
+  initialValue: {
+    gridValue: 8,
+  },
 };
 
 export const pageSectionSpecial = {
@@ -41,7 +51,17 @@ export const pageSectionSpecial = {
       title: "Text",
       description: "one or two sentences",
     },
+    {
+      name: "gridValue",
+      type: "number",
+      title: "Grid Value",
+      description:
+        "how many columns out of 16 total when screen is wide.  1/2 width = 8.  full width = 16.  becomes full width on small screen",
+    },
   ],
+  initialValue: {
+    gridValue: 8,
+  },
 };
 
 export const pageSectionTestimonial = {
@@ -72,5 +92,15 @@ export const pageSectionTestimonial = {
       title: "Body",
       type: "blockContent",
     },
+    {
+      name: "gridValue",
+      type: "number",
+      title: "Grid Value",
+      description:
+        "how many columns out of 16 total when screen is wide.  1/2 width = 8.  full width = 16.  becomes full width on small screen",
+    },
   ],
+  initialValue: {
+    gridValue: 8,
+  },
 };

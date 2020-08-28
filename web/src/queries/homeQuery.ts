@@ -19,6 +19,8 @@ export default groq`*[_type == 'dummyWebsite' && slug.current == $slug][0] {
   logo,
   logoIncludesName,
   mainMenu[] {
+    slug,
+    title,
      page->{slug, title},
      buttonText,
       subLinks[]{

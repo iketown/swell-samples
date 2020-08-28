@@ -22,6 +22,9 @@ const StyledButton = styled(Button)`
       background: ${button1.selectedBackground};
       color: ${button1.background};
     }
+    .dropdown.icon {
+      display: none;
+    }
   }
 `;
 const StyledDDMenu = styled(Dropdown.Menu)`
@@ -49,7 +52,7 @@ const BleyDropdown: React.FC<{
   } = useContentCtx();
   return (
     <StyledButton>
-      <Dropdown pointing text="Specialties">
+      <Dropdown text="Specialties">
         <StyledDDMenu>
           {subLinks.map(({ page }) => {
             const {

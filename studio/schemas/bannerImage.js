@@ -16,7 +16,7 @@ export default {
       name: "image",
       options: {
         hotspot: true,
-        metadata: ["palette"],
+        // metadata: ["palette"],
       },
     },
   ],
